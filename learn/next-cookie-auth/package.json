@@ -1,0 +1,27 @@
+{
+  "name": "next-cookie-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.tsx"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^13.9.1",
+    "@types/react-dom": "^16.9.5",
+    "axios": "^0.19.2",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "next": "^9.3.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.23"
+  }
+}

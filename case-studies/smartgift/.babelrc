@@ -1,0 +1,30 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@": "./src",
+          "@config": "./src/config",
+          "@constants": "./src/constants",
+          "@pages": "./src/pages",
+          "@public": "./src/public",
+          "@store": "./src/store",
+          "@styles": "./src/styles",
+          "@utils": "./src/utils",
+          "@components": "./src/view/components",
+          "@containers": "./src/view/containers",
+          "@ui": "./src/view/ui"
+        }
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,43 @@
+//Big Button
+.big-button {
+    background: $purple;
+    border: none;
+    border-bottom: .6rem solid darken($purple, $amount: 10%); //darken return yapan bir fonksiyondur. Koyulastirma yapmak icin kullanilir. 2 argument alir icine. 1. si koyulastirilmak istenen renk, 2. si ne kadar yuzde koyulastirilacagidir. 
+    color: white;
+    font-weight: bold;
+    font-size: $l-size;
+    margin-bottom: $xl-size;
+    padding: 2.4rem;
+    width: 100%;
+}
+
+//Button Disabled ken tasiyacagi ozellikleri barindirir.
+.big-button:disabled {
+    opacity: .5;
+}
+
+
+// Button
+.button {
+    background: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($color: $purple, $amount: 10%);
+    color: white;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+// eger -- verirsek modified version oldugu anlamina gelir.
+// Yani bir html tagine once button sornada button--link verirsek, Once button'dan tum ozelliklerini alir sonrada button--link dan modifiye edilmis ozelliklerini alarak kendini duzeltir.
+.button--link {
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0;
+}
+
+@media (max-width: $desktop-breakpoint) {
+    .big-button {
+        margin-bottom: $m-size;
+    }
+}

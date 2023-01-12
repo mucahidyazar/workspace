@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment-with-locales.min.js"></script>
+  </head>
+  <body>
+    <h1>Note App</h1>
+    <h2>Take notes and never forget</h2>
+
+    <input type="text" class="todoInput" placeholder="Filter Notes" />
+    <select id="filteredBy">
+      <option value="byEdited">Sort by last edited</option>
+      <option value="byCreated">Sort by recently created</option>
+      <option value="byAlphabetically">Sort by alphabetically</option>
+    </select>
+    <div class="notes"></div>
+    <form id="todoForm">
+      <input type="text" placeholder="First name" name="firstName" />
+      <button>Create Note</button>
+    </form>
+    <script src="notes-functions.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+// Widget
+.widget {
+    background: $light-blue;
+    margin-bottom: $xl-size;
+}
+
+.widget__message {
+    color: $off-white;
+    margin: 0;
+    padding: $l-size;
+    text-align: center;
+    border-bottom: 1px solid lighten($color: $light-blue, $amount: 10%);
+}
+
+// Widget Header
+.widget-header {
+    background: $blue;
+    color: $off-white;
+    
+    //Displayi FLEX'e ayarlarsa Bir Div icindeki 2 Eleman yan yana gelirler.
+    //justify-content ise boslugun nereye gelecegini ayarlar. Biz bosluk 2 cismin ortasina yerlessin dedik. Eger space-around deseydik Her iki cismin ayri ayri 4 tarafinada bosluk ortak olarak dagitilacakti.
+    display: flex;
+    justify-content: space-between;
+    
+    padding: $m-size;
+}
+
+.widget-header__title {
+    margin: 0;
+}

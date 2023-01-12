@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["better-styled-components", "unused-imports", "sort-exports"],
+  "rules": {
+    "prettier/prettier": [
+      0,
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": 0,
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "sort-exports/sort-exports": ["error", { "sortDir": "asc" }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "unknown",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          { "pattern": "@**", "group": "external", "position": "after" }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "@typescript-eslint/no-empty-function": 0,
+    "react/display-name": 0,
+    "@next/next/no-img-element": 0
+  }
+}

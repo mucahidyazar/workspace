@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+  </head>
+  <body>
+    <h1>Todo App</h1>
+    <input type="text" class="filterTodos" placeholder="Filter Todos" />
+    <label> <input type="checkbox" id="hideCompleted" /> Hide completed </label>
+    <div class="todos"></div>
+    <form class="todoForm">
+      <input
+        type="text"
+        class="newTodo"
+        name="newTodo"
+        placeholder="New Todo"
+      />
+      <input type="checkbox" />
+      <button class="addTodo">Add Todo</button>
+    </form>
+    <script src="functions.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

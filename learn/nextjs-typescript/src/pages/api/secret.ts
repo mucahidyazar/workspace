@@ -1,0 +1,1 @@
+export const SECRET_KEY_DONENV = "SECRET_KEY_DONENV";

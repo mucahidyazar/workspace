@@ -1,0 +1,11 @@
+.checkoutSummary {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 60em) {
+  .checkoutSummary {
+    width: 50rem;
+  }
+}

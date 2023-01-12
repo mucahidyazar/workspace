@@ -1,0 +1,46 @@
+{
+  "name": "expensify-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+  },
+  "author": "Mucahid Yazar",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "css-loader": "^3.4.0",
+    "live-server": "^1.2.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-datepicker": "^2.10.1",
+    "react-dates": "^12.7.1",
+    "react-dom": "^16.12.0",
+    "react-modal": "^3.11.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.1",
+    "uuid": "^3.3.3",
+    "validator": "^12.1.0",
+    "webpack": "^4.41.4",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  }
+}

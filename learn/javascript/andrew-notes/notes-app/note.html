@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment-with-locales.min.js"></script>
+  </head>
+  <body>
+    <h1>Edit page</h1>
+    <a href="/notes-app">Home</a>
+    <input type="text" id="noteTitle" placeholder="Note Title" />
+    <span id="lastEdited"></span>
+    <textarea
+      placeholder="Enter Note Text"
+      id="noteBody"
+      cols="30"
+      rows="10"
+    ></textarea>
+    <button id="removeNote">Remove Note</button>
+    <script src="notes-functions.js"></script>
+    <script src="notes-edit.js"></script>
+  </body>
+</html>

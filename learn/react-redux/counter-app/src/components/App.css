@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.new-counter {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #533d7c;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+.new-counter:hover {
+    cursor: pointer;
+    background-color: #322348;
+}

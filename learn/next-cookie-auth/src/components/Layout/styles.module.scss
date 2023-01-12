@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.navbar {
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+
+.link {
+  margin-right: .5rem;
+}
+
+.button {
+  text-decoration: underline;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border-style: none;
+  color: rgb(0, 0, 238);
+}

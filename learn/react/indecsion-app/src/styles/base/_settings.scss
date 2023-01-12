@@ -1,0 +1,18 @@
+//Bu dosya da tek bir selesctor icermeyecek ve uygulanmayacak
+//Bu dosya sadece uygulamamiz icin temamizi tanimlayacagizmiz yer
+//Asagida tanimladigimiz degiskeni style.scss'de bu dosyamizin altinda import edilen her yerde kullanabiliriz.
+
+//Colors
+$off-black: #20222b;
+$off-white: #a5afd7;
+$blue: #3c4251;
+$light-blue: #464b5e;
+$dark-blue: #333745;
+$purple: #8357c5;
+
+//Sizes
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+$desktop-breakpoint: 45rem;
