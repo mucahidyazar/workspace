@@ -1,0 +1,28 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.pathContainer {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 197, 24, 0.26) 22.24%,
+    rgba(251, 247, 252, 0) 100%
+  );
+  width: 100%;
+  margin-bottom: 35px;
+}
+.path {
+  height: 77px;
+  display: flex;
+  align-items: center;
+
+  & a > span:not(:last-child) {
+    margin-right: 10px;
+    color: $primary-1;
+    font-weight: 600;
+  }
+  & a > span:last-child {
+    text-transform: capitalize;
+    margin-right: 10px;
+  }
+}

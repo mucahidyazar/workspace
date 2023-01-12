@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  font-size: 1.2rem;
+  background: indigo;
+
+  a {
+    color: darkgrey;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: bold;
+      color: lightgray;
+    }
+  }
+}
+
+.footer {
+  padding: 1em;
+}

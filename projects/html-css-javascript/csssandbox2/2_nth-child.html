@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>nth-child</title>
+    <style>
+      li {
+        padding: 0.25rem;
+        margin: 0.25rem;
+        list-style: none;
+      }
+
+      /* first-child */
+      li:first-child {
+        background: red !important;
+      }
+
+      /* last-child */
+      li:last-child {
+        background: blue;
+      }
+
+      /* nth-child selector matches every element that is the nth child, regardless of type, of its parent. */
+
+      /* Position 3 */
+      /* ul icerisinde ki 3. li yi secer */
+      li:nth-child(3) {
+        background: purple;
+      }
+
+      /* Every 3rd after 0 */
+      /* Her 3. 0'dan sonra 3er 3 er sayarak */
+      /* 3 er 3 er sayarak her 3. secilir. 3. 6. 9. .... liler secilir */
+      li:nth-child(3n + 0) {
+        background: orange;
+      }
+
+      /* Every 3rd after 7 */
+      /* Her 3. 7 den baslayarak secilir 7. 10. 13. 16. diye secilerek gider */
+      li:nth-child(3n + 7) {
+        background: yellow;
+      }
+
+      /* odd */
+      /* Her tek sayili eleman */
+      li:nth-child(odd) {
+        background: #ccc;
+      }
+
+      /* even */
+      /* Her cirf sayi olan eleman */
+      li:nth-child(even) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+      <li>Item 15</li>
+      <li>Item 16</li>
+      <li>Item 17</li>
+      <li>Item 18</li>
+      <li>Item 19</li>
+      <li>Item 20</li>
+    </ul>
+  </body>
+</html>

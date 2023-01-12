@@ -1,0 +1,21 @@
+.registration__login {
+  display: flex;
+  flex-direction: column;
+  padding: 10% 5%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &--email {
+    @extend %input-shared;
+  }
+
+  &--password {
+    @extend %input-shared;
+  }
+
+  &--button {
+    @extend %button-shared;
+  }
+}

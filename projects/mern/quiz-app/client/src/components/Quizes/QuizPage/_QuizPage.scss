@@ -1,0 +1,135 @@
+.section__quizpage {
+  margin-top: 10rem;
+  padding: 10rem;
+  box-shadow: 0 2rem 3rem rgba($color-light, 0.1);
+  position: relative;
+
+  .section__information {
+    width: 100%;
+
+    &-countdown {
+      min-width: 10rem;
+      text-align: center;
+      font-size: 5rem;
+      padding: 1rem 1rem 5rem 1rem;
+      background: linear-gradient(to bottom, $color-hard-1, $color-hard-2);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 70%, 0 100%);
+      transition: all 0.2s;
+      animation: animateCountdownBox 1s forwards ease-in-out;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .section__question {
+    background: darken($color: $color-light, $amount: 20);
+    color: $color-white;
+    padding: 1rem 2rem;
+    min-height: 8rem;
+    border-radius: 0.5rem;
+  }
+
+  .section__answers > * {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    background-color: darken($color: $color-light, $amount: 50);
+    border-radius: 0.5rem;
+
+    &:hover {
+      background: $color-darker;
+      cursor: pointer;
+    }
+  }
+
+  .chosen {
+    background: $color-darker;
+  }
+
+  .section__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    color: $color-white;
+
+    & > * > * {
+      padding: 1.3rem 5%;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+      transition: all 0.2s;
+    }
+
+    .jokers {
+      display: flex;
+      justify-content: space-between;
+      width: 45%;
+
+      & > * {
+        background-color: rgba($color-medium-2, 0.5);
+        width: 45%;
+        border: none;
+        color: $color-white;
+
+        &:hover {
+          background-color: darken($color: $color-medium-2, $amount: 10);
+          cursor: pointer;
+        }
+      }
+
+      .disabled {
+        background-color: darken($color: $color-medium-2, $amount: 45);
+      }
+    }
+
+    .options {
+      display: flex;
+      width: 45%;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    &-next {
+      width: 45%;
+      background-color: $color-easy-2;
+
+      &:hover {
+        background-color: darken($color: $color-easy-2, $amount: 10);
+        cursor: pointer;
+      }
+    }
+
+    &-finish {
+      width: 45%;
+      background-color: $color-hard-2;
+
+      &:hover {
+        background-color: darken($color: $color-hard-2, $amount: 10);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 100em) {
+  .section__buttons {
+    flex-direction: column;
+
+    .jokers {
+      width: 100% !important;
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      width: 100% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section__quizpage {
+    margin-top: 1vh;
+    padding: 5vh;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/base/typography";
+
+#header {
+  height: 10.7rem;
+
+  .headerLeft {
+    width: 20%;
+    min-width: 300px;
+    color: $text-inverted;
+
+    h2 {
+      font-size: $heading-2;
+    }
+  }
+
+  .headerRight {
+  }
+}
+
+#header,
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,55 @@
+.Archive {
+
+    .ArchiveHeader {
+        background-color: #EF5350;
+        width: 100%;
+        height: 20vh;
+        min-height: 11rem;
+        max-height: 20vh;
+
+        .ArchiveNav {
+            padding: 1rem;
+            float: right;
+
+            a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                background-color: #2F2F2F;
+                padding: .7rem 1rem;
+                border-radius: .3rem;
+            }
+            a:hover {
+                background-color: lighten($color: #2F2F2F, $amount: 5);
+            }
+        }
+
+        .ArchiveBrand {
+            text-align: center;
+            font-size: 5rem;
+            color: white;
+            padding: 2.5rem;
+        }
+    }
+
+    .ExampleTask {
+        background-color: white;
+        width: 80%;
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: .5rem;        
+
+        .Task {
+            margin-bottom: .3rem;
+            font-weight: bold;
+        }
+
+        .Who {
+            color: grey;
+        }
+    }
+    .ExampleTask:hover {
+        background-color: darken($color: #fff, $amount: 10);
+        cursor: pointer;
+    }
+}

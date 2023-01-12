@@ -1,0 +1,13 @@
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 1fr min-content min-content min-content;
+  grid-gap: 2rem;
+  margin-top: 5rem;
+}
+
+@media only screen and (max-width: 43.75em) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+}

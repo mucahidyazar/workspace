@@ -1,0 +1,50 @@
+.container {
+  width: 1000px;
+  height: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+
+  /* Auto-fill asagida 100px genisliginde columnlar olusturur olusturabildigi kadar. Genisligimiz 1000px oldugu icin her satira 10 tane columns kurar. */
+  grid-template-columns: repeat(auto-fill, 100px);
+  /* Auto-fit ise yine 10 columns olusturur yukaridaki gibi fakat auto-fillde columnlar yeterli item yokkende aktif isede auto-fit de ise bu columnlar yeni itemnlar gelinceye kadar gosterilmezler ve width 0 olarak saklanirlar. */
+  grid-template-columns: repeat(auto-fit, 100px);
+
+  /* Fakat bu sekilde kullanimda ise oncelikli olarak max degeri olan 1fr i kullanacagi icin minmax olan icerikteki item sayisi 5 se 5 item tum satiri kaplar. 8ise 8 item tum satiri kaplar. Kalan 5 veya kalan 2 item geldikce yanlarina ayni satirda eklenirler. */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.item {
+  padding: 20px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 30px;
+  background-color: orangered;
+}
+
+.item--1 {
+  background-color: orangered;
+}
+.item--2 {
+  background-color: yellowgreen;
+}
+.item--3 {
+  background-color: blueviolet;
+}
+.item--4 {
+  background-color: palevioletred;
+}
+.item--5 {
+  background-color: royalblue;
+}
+.item--6 {
+  background-color: goldenrod;
+}
+.item--7 {
+  background-color: crimson;
+}
+.item--8 {
+  background-color: darkslategrey;
+}

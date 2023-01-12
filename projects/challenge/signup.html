@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Styling</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #344a72;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .form-wrap {
+            width: 50%;
+            margin-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            padding: 1rem;
+            color: #333;
+        }
+
+        .form-wrap h1 {
+            text-align: center;margin-bottom: .5rem;
+        }
+
+        .form-wrap p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .form-wrap .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-wrap .form-group label {
+            display: block;
+            margin-bottom: .2rem;
+        }
+
+        .form-wrap .form-group input {
+            width: 100%;
+            padding: .5rem;
+            border-radius: .2rem;
+            border: 1px solid grey;
+        }
+
+        .form-wrap button {
+            width: 100%;
+            padding: .6rem;
+            background-color: #49c1a2;
+            color: #fff;
+            border: none;
+            margin-bottom: 1rem;
+            border-radius: .2rem;
+        }
+        .form-wrap button:hover {
+            background-color: #37a08e;
+            cursor: pointer;
+        }
+
+        .form-wrap .bottom-text {
+            text-align: center;
+            margin: .5rem 0;
+        }
+
+        .form-wrap .bottom-text a {
+            text-decoration: none;
+        }
+
+        footer {
+            width: 50%;
+            margin: 0 auto;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #37a08e;
+        }
+    
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form-wrap">
+
+        <h1>Sign Up</h1>
+        <p>It's free anotomy takes a minute</p>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" name="confirmPassword">
+        </div>
+        <button>Sign Up</button>
+
+        <div class="bottom-text">
+            By clicking the Sign Up button you agree to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <span>Already have an Account? <a href="#">Login Here</a></span>
+    </footer>
+    
+</body>
+</html>

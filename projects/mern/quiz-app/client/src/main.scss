@@ -1,0 +1,34 @@
+//Main
+@import "./public/scss/variables";
+@import "./public/scss/base";
+@import "./public/scss/typography";
+
+//Layouts
+@import "./public/scss/layout/input";
+@import "./public/scss/layout/button";
+
+//Components
+@import "./components/CreateQuiz/CreateQuiz";
+@import "./components/CreateQuiz/CreateQuizInformation/CreateQuizInformation";
+@import "./components/CreateQuiz/CreateQuizQuestions/CreateQuizQuestions";
+@import "./components/Layout/Layout";
+@import "./components/Home/Home";
+@import "./components/Header/Header";
+@import "./components/Leaderboard/Leaderboard";
+@import "./components/Profile/Profile";
+@import "./components/Profile/ProfileBadges/ProfileBadges";
+@import "./components/Profile/ProfileInfo/ProfileInfo";
+@import "./components/Profile/ProfileQuizes/ProfileQuizes";
+@import "./components/Profile/ProfileStats/ProfileStats";
+@import "./components/Quizes/Quizes";
+@import "./components/Quizes/QuizPage/QuizPage";
+@import "./components/Quizes/ResultPage/ResultPage";
+@import "./components/Quizes/QuizCard/QuizCard";
+@import "./components/Profile/Profile";
+@import "./components/Registration/Registration";
+@import "./components/Registration/Login/Login";
+@import "./components/Registration/Register/Register";
+@import "./components/Settings/Settings";
+
+//Layouts
+@import "./components/Layout/InputSelect/InputSelect";

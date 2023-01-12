@@ -1,0 +1,39 @@
+.sort__select {
+  text-align: center;
+  width: 10rem;
+  margin-left: 1rem;
+  background: darken($color: $color-light, $amount: 50);
+  border: none;
+  color: inherit;
+  padding: 1rem;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.sort__options {
+  display: none;
+}
+
+.sort__select--show {
+  position: relative;
+
+  .sort__options {
+    display: block;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    z-index: 3;
+    background: inherit;
+    width: 100%;
+
+    & > * {
+      padding: 0.8rem;
+
+      &:hover {
+        background-color: $color-darker;
+        cursor: pointer;
+      }
+    }
+  }
+}

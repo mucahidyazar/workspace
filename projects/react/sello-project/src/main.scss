@@ -1,0 +1,20 @@
+//BASE
+@import "./public/scss/base/base";
+@import "./public/scss/base/typography";
+@import "./public/scss/base/variables";
+@import "./public/scss/base/utilities";
+
+//UTILITIES
+@import "./components/SectionTitle/SectionTitle";
+
+//COMPONENTS
+@import "./components/Header/Header";
+@import "./components/Trending/Trending";
+@import "./components/TrendingBottom/TrendingBottom";
+@import "./components/FeaturedItem/FeaturedItem";
+@import "./components/Slider/Slider";
+@import "./components/OurStory/OurStory";
+@import "./components/InstagramFeed/InstagramFeed";
+@import "./components/Category/Category.scss";
+@import "./components/Footer/Footer";
+@import "./components/FooterLast/FooterLast";

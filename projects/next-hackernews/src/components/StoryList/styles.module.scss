@@ -1,0 +1,38 @@
+.list {
+  padding: 0 1rem;
+}
+
+.story {
+  padding: 1rem 0;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: #333;
+      text-decoration: none;
+
+      &:hover,
+      .story__details {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__details {
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    span {
+      margin-right: 1rem;
+    }
+
+    a {
+      color: #6600ff;
+      text-decoration: none;
+    }
+  }
+}

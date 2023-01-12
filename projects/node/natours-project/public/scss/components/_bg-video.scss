@@ -1,0 +1,16 @@
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; //videonun tum alana yayilmasini saglar bunu yapmazsa filmlerdeki siyah cerceveler gibi  alt ve ustteki alanlari video doldurmayacak ve bos kalacaktir.
+  }
+}

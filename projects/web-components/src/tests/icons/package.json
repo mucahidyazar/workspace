@@ -1,0 +1,35 @@
+{
+  "name": "@mucahidyazar/icons",
+  "version": "1.0.2",
+  "description": "",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "start": "nodemon --watch src --exec yarn build -e js,jsx",
+    "build": "concurrently yarn:build:*",
+    "version": "yarn build",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .js,.jsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .js,.jsx -d dist/cjs --source-maps"
+  },
+  "dependencies": {
+    "@mucahidyazar/icons": "1.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gitHead": "a37774c5d8df0d6b308c456f9030a5a00435ac5d"
+}

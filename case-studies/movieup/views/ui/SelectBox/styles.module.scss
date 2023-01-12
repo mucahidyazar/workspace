@@ -1,0 +1,77 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+
+.selectBox {
+  width: 150px;
+  height: 68px;
+  padding: 0 30px;
+  background-color: $neutral-2;
+  border-radius: 8px;
+  cursor: pointer;
+  @include transition(all 0.3s ease-in-out);
+  position: relative;
+
+  &:hover {
+    background-color: rgba($color: $neutral-2, $alpha: 0.8);
+  }
+
+  &Icon {
+    width: 10px;
+    height: 5px;
+    background: $primary-1;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+    @include transition(all 0.3s ease-in-out);
+  }
+  &IconActive {
+    transform-origin: center;
+  }
+
+  input {
+    display: none;
+  }
+
+  .select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    cursor: pointer;
+
+    &BoxText {
+      text-transform: capitalize;
+    }
+  }
+
+  .menu {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+
+    &Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 150px;
+      height: 50px;
+      padding: 0 30px;
+      background-color: rgba($color: $neutral-2, $alpha: 0.6);
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: rgba($color: $neutral-2, $alpha: 0.9);
+      }
+    }
+  }
+
+  input:checked ~ .menu {
+    opacity: 1;
+    height: 200px;
+  }
+}

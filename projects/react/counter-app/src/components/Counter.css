@@ -1,0 +1,75 @@
+.Counter {
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+.main {
+    display: flex;
+    height: 4rem;
+    max-height: 4rem;
+    color: white;
+}
+
+.screen {
+    width: 50%;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: .2rem;
+}
+
+.decrease {
+    width: 15%;
+    text-align: center;
+    font-size: 3rem;
+    transition: .2s;
+}
+.decrease:hover {
+    cursor: pointer;
+    background-color: #533d7c;
+}
+.decrease span {
+    margin-top: .2rem;
+}
+
+.increase {
+    width: 15%;
+    text-align: center;
+    font-size: 3rem;
+    transition: .2s;
+}
+.increase:hover {
+    cursor: pointer;
+    background-color: #533d7c;
+}
+.increase span {
+    margin-top: .2rem;
+}
+
+.reset {
+    width: 18.5%;
+    text-align: center;
+    font-size: 2rem;
+    transition: .2s;
+}
+.reset:hover {
+    cursor: pointer;
+    background-color: #533d7c;
+}
+.reset i {    
+    margin-top: 1rem;
+}
+
+.remove {
+    width: 1.5%;
+    background-color: black;
+}
+.remove:hover {
+    background-color: #C82333;
+    cursor: pointer;
+}

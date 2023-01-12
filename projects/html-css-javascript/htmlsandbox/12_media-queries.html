@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bu sekilde kullanimdada max width 768 px e kadar yani 0-768 px arasi bu css 'i kullan demis oluyoruz. -->
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <title>Media Queries</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: gray;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        
+        /* 
+        Burada ise 500px e kadar mavi, 500px altinda ise tekrar ana degeri griye doner
+        @media (min-width: 500px) {
+            body {
+                background: blue;
+            }
+        } 
+        */
+
+        /* Smartphones */
+        /* Width 500px e kadar kirmizi, 500px den fazlasinda normal griye doner */
+        @media (max-width: 500px) {
+            body {
+                background: red;
+            }
+            #smartphone h1 {
+                display: block;
+            }
+        }
+
+        /* Tablet */
+        /* 
+        Sadece max-width 768px yaparsak 0'dan 768px 'e kadar olan herseyi mavi yapar ve yukarda ki 500px e kadar mobile cihazlarda kirmizi olsun istegimiz bosa gitmis olur.
+        Bunun olmamasi icin ayriyeten birde min-width 501px yapiyoruz ve diyoruz ki
+        max-width 768px 'e  kadar min width de 501 px e kadar asagidaki ozelliklere sahip ol. 
+        */
+        @media (min-width: 501px) and (max-width: 768px) {
+            body {
+                background: blue;
+            }
+            #tablet h1 {
+                display: block;
+            }
+        }
+
+        /* Normal */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            body {
+                background: green;
+            }
+            #normal h1 {
+                display: block;
+            }
+        }
+
+        /* Widescreen */
+        @media (min-width: 1201px) {
+            body {
+                background: black;
+            }
+            #widescreen h1 {
+                display: block;
+            }
+        }
+        
+
+        /* Landscape */
+        /*
+        Telefon ekranlari yan cevrildiginde ekran yuksekligi dusecegi icin burada onu yakalayip ona gore bir sayfa design ediyoruz.
+        */
+        @media (max-height: 500px) {
+            body {
+                background: orange;
+            }
+            #landscape h1 {
+                display: block;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="widescreen">
+        <h1>widescreen</h1>
+    </div>
+    <div id="normal">
+        <h1>normal</h1>
+    </div>
+    <div id="tablet">
+        <h1>tablet</h1>
+    </div>
+    <div id="smartphone">
+        <h1>smartphone</h1>
+    </div>
+    <div id="landscape">
+        <h1>landscape</h1>
+    </div>
+    
+</body>
+</html>

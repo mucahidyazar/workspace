@@ -1,0 +1,96 @@
+.settings {
+  background-color: darken($color: $color-light, $amount: 50);
+  margin-top: 5rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+}
+
+.settings__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 4rem 8rem 4rem;
+
+  & input:not([type="date"]) {
+    margin-bottom: 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    border-bottom: 1px solid $color-light;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+  }
+
+  & input[type="date"] {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    border-bottom: 1px solid $color-light;
+    font-size: 1.8rem;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      display: none;
+    }
+    &::-webkit-calendar-picker-indicator {
+      -webkit-appearance: none;
+      display: none;
+    }
+  }
+
+  & button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-darker;
+    border: none;
+    color: inherit;
+    width: 100%;
+    padding: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color: $color-light, $amount: 70);
+    }
+  }
+
+  & label {
+    font-size: 1.5rem;
+
+    input {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .settings {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .settings {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .settings {
+    width: 95%;
+
+    &__form {
+      padding: 2rem 2rem 8rem 2rem;
+    }
+  }
+}

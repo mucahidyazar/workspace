@@ -1,0 +1,28 @@
+//ABSTRACTS
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+//BASE
+@import './base/normalize';
+@import './base/typography';
+
+//COMPONENTS
+@import './components/carousels';
+@import './components/forms';
+
+//LAYOUTS
+@import './layouts/grid';
+@import './layouts/navbar';
+
+//PAGES
+@import './pages/aboutpage';
+@import './pages/homepage';
+
+//VENDORS
+@import './vendors/bootstrap';
+
+//ICON
+@import './icon/style.css';
+
+//BOOTSTRAP
+@import 'bootstrap/dist/css/bootstrap.min.css';

@@ -1,0 +1,57 @@
+.TodoMenu {
+    height: 60vh;
+    min-height: 60vh;
+    max-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    .TodoTasks, .TodoDoing, .TodoDone {
+        width: 25%;
+        height: 50vh;
+        border-radius: .5rem;
+        padding: 1rem 1.5rem;
+
+        .TodoTasksInformation {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            margin: .5rem 0;
+        }
+
+        .ExampleTask {
+            background-color: #fff;
+            border-radius: .3rem;
+            padding: .5rem;
+            margin-bottom: .5rem;
+
+            .Task {
+                margin-bottom: .3rem;
+                font-weight: bold;
+            }
+
+            .Who {
+                color: lighten($color: grey, $amount: 8);
+            }
+        }
+        .ExampleTask:hover {
+            cursor: pointer;
+            background-color: #FEE6F3;
+        }
+    }
+
+    .TodoTasks {
+        background-color: #DFEEFF;
+    }
+
+    .TodoDoing {
+        background-color: #FEE6F3;
+    }
+
+    .TodoDone {
+        background-color: #DFF7F7;
+    }
+}

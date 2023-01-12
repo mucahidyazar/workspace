@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Basic</title>
+    <style>
+
+        #container {
+            display: flex;
+            /* Dikey olarak siralar elementlerini */
+            /* flex-direction: column; */
+
+            /* Default olarak flex yazilinca, flex direction u row kabul eder ve ayni satirda sola hizalar tum elementleri */
+            /* Fakat flex direction row-reverse ise saga hizalar tum elementleri ayni satirda*/
+            /* flex-direction: row-reverse; */
+
+            /* Bu sekilde satirda cok fazla yani 12 den fazla eleman oldugunda scrool bar cikmasini onleriz ve scrool bar cikartmaz bize fazla elemanlari alt satira gonderir. */
+            /* Alt satira tarayici ekran boyuttuna gore responsive olarak elemanalri gonderir. Yani ilk 2 gonderir 10 kalir biraz daha kuculur 2 taha gonderir 8 kalir ilk satida gibi... */
+            flex-wrap: wrap;
+
+            /* Bu ise flex-wrap: wrap; ile birebir ayni islemi yapar */
+            /* flex-flow: row wrap; */
+            /* Hersey tek satirda kalmaya devam eder. Birnevi flex-wrap: wrap; yazilmadigini dusunun. */
+            /* flex-flow: row nowrap; */
+        }
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+            text-align: center;
+            /* flex: 1 diyerek tum elemanlara ayni satirda esit genislik vererek tum satiri kaplamalarini saglar. */
+            flex: 1;
+            /* Margin verirsek floattaki gibi tasma dis alan yani kapladiklari alan kuculur fakat margini cevrelerine verirler */
+            margin: 0 0.75rem;
+        }
+
+        .item:first-child {
+            /* Bu sekilde 2 verirsek satirda yarisini kaplamasini soyleriz. */
+            /* 3 verirsek %75 ini kaplamasini soyleriz. */
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="item">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+        </div>
+
+    </div>
+    
+</body>
+</html>

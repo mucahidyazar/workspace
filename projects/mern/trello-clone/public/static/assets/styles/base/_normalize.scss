@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+body {
+  background-color: $text-inverted;
+}
+
+.container {
+  width: 1044px;
+  margin: auto;
+}

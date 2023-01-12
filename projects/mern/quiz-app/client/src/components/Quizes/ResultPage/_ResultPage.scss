@@ -1,0 +1,129 @@
+.resultpage {
+  margin-top: 10rem;
+  padding: 5rem 0;
+  box-shadow: 0 2rem 3rem rgba($color-light, 0.1);
+  color: $color-light;
+  padding: 5%;
+}
+
+.resultpage-tfp {
+  display: flex;
+  text-align: center;
+  box-shadow: 0 2rem 3rem rgba($color-light, 0.1);
+
+  & > * {
+    padding: 1rem 0.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & > [class^="tfp__true--type"],
+    & > [class^="tfp__pass--type"],
+    & > [class^="tfp__false--type"] {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.tfp__true {
+  background-color: rgba($color-easy-1, 0.3);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+
+  &:hover {
+    background-color: rgba($color-easy-1, 0.5);
+  }
+
+  &-point {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+.tfp__pass {
+  background-color: rgba($color-medium-1, 0.3);
+
+  &:hover {
+    background-color: rgba($color-medium-1, 0.5);
+  }
+
+  &-point {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+.tfp__false {
+  background-color: rgba($color-hard-1, 0.3);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+  &:hover {
+    background-color: rgba($color-hard-1, 0.5);
+  }
+
+  &-point {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}
+
+.resultpage-total {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  .tfp__point {
+    font-weight: 700;
+    font-size: 20rem;
+    box-shadow: 0 2rem 3rem rgba($color-darker, 1);
+  }
+}
+
+.resultpage__options {
+  text-transform: uppercase;
+
+  & > a:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  & > a {
+    background-color: rgba($color-light, 0.3);
+    padding: 2rem 0;
+    display: flex;
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($color-light, 0.4);
+    }
+  }
+
+  & > a > i {
+    text-align: center;
+    width: 15%;
+    font-size: 4rem;
+  }
+
+  & > a > span {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .resultpage__options {
+    & > a > i {
+      width: 20%;
+      font-size: 2rem;
+    }
+
+    & > a > span {
+      font-size: 1.5rem;
+    }
+  }
+}

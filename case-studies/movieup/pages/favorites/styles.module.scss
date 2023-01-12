@@ -1,0 +1,15 @@
+@import '../../public/static/assets/styles/abstracts/variables';
+@import '../../public/static/assets/styles/abstracts/mixins';
+@import '../../public/static/assets/styles/base/breakpoints';
+
+.noContent {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    color: $neutral-1;
+  }
+}

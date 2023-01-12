@@ -1,0 +1,14 @@
+{
+  "name": "@mucahidyazar/server",
+  "version": "1.0.26",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@walnut/common": "^1.0.6",
+    "graphql-yoga": "^1.14.7"
+  },
+  "scripts": {
+    "test": "echo testing server with version: $npm_package_version"
+  },
+  "gitHead": "957abd85c3c1ab1317ecb8e7e000bc8811c75987"
+}

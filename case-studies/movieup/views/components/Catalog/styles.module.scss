@@ -1,0 +1,87 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.catalog {
+  width: 100%;
+  margin: 100px 0;
+}
+
+.cards {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+
+  &OverlayLeft,
+  &OverlayRight {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    margin: 0 !important;
+  }
+  &OverlayLeft {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      rgba($neutral-6, 1),
+      rgba($neutral-6, 0.01)
+    );
+  }
+  &OverlayRight {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba($neutral-6, 1),
+      rgba($neutral-6, 0.01)
+    );
+  }
+  &ArrowLeft,
+  &ArrowRight {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    background-color: $neutral-6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+    cursor: pointer;
+    margin: 0 !important;
+
+    &:hover {
+      background-color: $primary-1;
+
+      & i::before {
+        color: $neutral-6;
+      }
+    }
+  }
+  &ArrowLeft {
+    left: 10%;
+  }
+  &ArrowRight {
+    right: 10%;
+  }
+
+  & > div:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@include tablet {
+  .card {
+    width: 100%;
+  }
+  .cards {
+    width: 100%;
+
+    &OverlayLeft,
+    &OverlayRight {
+      display: none;
+    }
+  }
+}

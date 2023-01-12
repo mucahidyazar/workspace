@@ -1,0 +1,131 @@
+@import '../../../../public/static/assets/styles/abstracts/variables';
+@import '../../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../../public/static/assets/styles/base/breakpoints';
+
+.card {
+  display: flex;
+  padding: 50px 20px 50px 50px;
+  width: 942px;
+  height: 486px;
+  background-color: $neutral-4;
+  border-radius: 10px;
+
+  &Image {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 270px;
+    height: 386px;
+    margin-right: 62px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-position: cover;
+    }
+  }
+}
+
+.info {
+  width: 541px;
+  display: flex;
+  flex-direction: column;
+
+  &Header,
+  &HeaderLeft,
+  &HeaderRight,
+  &Footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &Header {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &HeaderRight {
+    & > button:not(:last-child) {
+      margin-right: 19px;
+    }
+  }
+  &HeaderLeft {
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  &Content {
+    flex-grow: 1;
+  }
+
+  &Footer {
+    & > button:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
+
+.year {
+  font-weight: 600;
+  font-size: 18px;
+  color: $primary-1;
+}
+.title {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.description {
+  color: $neutral-1;
+  line-height: 35px;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+@include large-mobile {
+  .card {
+    height: auto;
+    flex-direction: column;
+
+    &Image {
+      width: 100%;
+      height: 386px;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .info {
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .card {
+    width: 150vw;
+    padding: 50px 10px;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Image {
+      margin-bottom: 10px;
+    }
+  }
+  .info {
+    &Header {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      & > div:first-child {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: space-between;
+      }
+      & > div:last-child {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: start;
+      }
+    }
+  }
+}

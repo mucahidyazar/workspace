@@ -1,0 +1,18 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.nav {
+  height: 128px;
+  background-color: rgba($color: $primary-1, $alpha: 0.1);
+
+  & > div {
+    height: 100%;
+  }
+
+  &Inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,67 @@
+.App {
+    width: 100%;
+
+    .Task {
+        width: 50%;
+        margin: 10rem auto 0 auto;
+        padding: 1rem; 
+        border: 1px solid grey;
+        
+        .TaskForm {
+            display: flex;
+            justify-content: space-around;
+
+            input {
+                padding: .5rem;
+                border: none;
+                border-bottom: 1px solid black;
+            }
+            input:focus {                
+                outline: none;
+            }
+            button {
+                padding: .5rem 1.5rem;
+                border: none;
+                background-color: #1abc9c;
+                color: white;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
+        .TaskList {
+
+            .TaskNav {                
+                display: flex;
+                justify-content: space-around;
+                color: white;
+                padding: .3rem;
+                margin: .5rem 0;
+                background-color: #0D95E8;
+                text-transform: uppercase;
+            }
+        }
+
+        .TaskExample {
+            display: flex;
+            justify-content: space-around;
+            padding: .3rem;
+
+            .TaskExampleTags {
+                color: #fff;
+
+                span{        
+                    padding: .2rem .5rem;
+                    background-color: black;            
+                    margin-right: .2rem;
+                    border-radius: .2rem;
+                }
+            }
+        }
+        .TaskExample:hover {
+            background-color: #1ABC9C;
+            cursor: pointer;
+        }
+    }
+}

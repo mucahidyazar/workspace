@@ -1,0 +1,2 @@
+export const GET_FAVORITES = 'GET_FAVORITES'
+export const SWITCH_FAVORITE = 'SWITCH_FAVORITE'

@@ -1,0 +1,25 @@
+.todo {
+  height: 16.66%;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  &Order {
+    margin-right: 2rem;
+    font-weight: 700;
+  }
+
+  &Buttons {
+    width: 30rem;
+  }
+}
+
+.todo,
+.todoContent,
+.todoButtons {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,9 @@
+#endpoint: ${env:PRISMA_ENDPOINT}
+#endpoint: https://shopping-app-e8d3bca170.herokuapp.com/shopping-app/dev
+endpoint: https://shopping-app-e8d3bca170.herokuapp.com/shopping-app/prod
+datamodel: datamodel.graphql
+secret: ${env:PRISMA_SECRET}
+
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma

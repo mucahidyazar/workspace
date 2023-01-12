@@ -1,0 +1,16 @@
+%input-shared {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  transition: all 0.3s;
+  background-color: darken($color: $color-light, $amount: 50);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    background: $color-darker;
+    outline: none;
+  }
+}

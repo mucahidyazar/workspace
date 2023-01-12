@@ -1,0 +1,15 @@
+{
+  "name": "sass-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

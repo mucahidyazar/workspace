@@ -1,0 +1,65 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.header {
+  width: 100%;
+  height: 689px;
+  background-image: url('../../../public/static/assets/png/header1.png');
+  position: relative;
+  margin-bottom: 150px;
+
+  &Overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($primary-1, 0.9);
+  }
+
+  &Content {
+    width: 50%;
+    margin-top: 127px;
+
+    h2 {
+      font-size: 65px;
+      margin-bottom: 30px;
+      color: $neutral-6;
+    }
+    p {
+      line-height: 24px;
+      color: $neutral-6;
+    }
+  }
+}
+
+.search {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+@include tablet {
+  .header {
+    &Content {
+      width: 80%;
+    }
+  }
+
+  .search {
+    bottom: -35%;
+  }
+}
+
+@include large-mobile {
+  .header {
+    &Content {
+      h2 {
+        font-size: 45px;
+      }
+      width: 100%;
+    }
+  }
+}

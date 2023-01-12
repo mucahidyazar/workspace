@@ -1,0 +1,95 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+
+.button {
+  background-color: $primary-1;
+  color: $neutral-6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  padding: 0 30px;
+  width: max-content;
+  cursor: pointer;
+  @include transition(all 0.3s ease-in-out);
+  outline: none;
+  border: none;
+  font-size: 16px;
+
+  & i::before {
+    color: $neutral-6;
+  }
+
+  &:hover {
+    background-color: rgba($color: $primary-1, $alpha: 0.8);
+
+    & i::before {
+      color: $primary-1;
+    }
+  }
+}
+.button.disabled {
+  background-color: rgba($color: $primary-1, $alpha: 0.4);
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  padding: 0;
+  justify-content: center;
+}
+
+.small {
+  justify-content: center;
+  height: 46px;
+  padding: 0 20px;
+  color: $neutral-0;
+  font-size: 16px;
+}
+
+.nobg {
+  background-color: transparent;
+  color: $primary-1;
+
+  &:hover {
+    background-color: rgba($color: $primary-1, $alpha: 0.1);
+  }
+}
+
+.pageNum,
+.pageText {
+  height: 50px;
+  background-color: rgba($color: $primary-1, $alpha: 0.15);
+  color: $primary-1;
+  font-size: 16px;
+
+  &:hover {
+    background-color: rgba($color: $primary-1, $alpha: 0.3);
+  }
+
+  &Active {
+    background-color: $primary-1;
+    color: $neutral-6;
+
+    &:hover {
+      background-color: rgba($color: $primary-1, $alpha: 0.9);
+    }
+  }
+}
+
+.pageNum {
+  width: 50px;
+  padding: 0;
+  justify-content: center;
+}
+.pageNum.active {
+  background-color: $primary-1;
+  color: $neutral-6;
+}
+.pageText {
+  width: min-content;
+}

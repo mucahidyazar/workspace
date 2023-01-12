@@ -1,0 +1,29 @@
+.input {
+  width: 100%;
+  padding: 1rem;
+}
+
+.label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.input-element {
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+  font: inherit;
+  padding: 0.6rem 1rem;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    background-color: #ccc;
+  }
+
+  &__invalid {
+    border: 1px solid red;
+    background-color: #fda49a;
+  }
+}

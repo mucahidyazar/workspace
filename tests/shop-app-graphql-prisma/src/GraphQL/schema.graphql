@@ -1,0 +1,30 @@
+type Query {
+  products: [Product!]!
+  categories: [Category!]!
+  categoryByName(name: String!): Category!
+  productsByCategory(categoryId: String!): [Product!]!
+}
+
+type Mutation {
+  createProduct(
+    name: String!
+    price: Float!
+    isStock: Boolean!
+    categoryId: String
+  ): Product!
+  createCategory(name: String): Category!
+}
+
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+  isStock: Boolean!
+  category: Category!
+}
+
+type Category {
+  id: ID
+  name: String!
+  products: [Product!]!
+}

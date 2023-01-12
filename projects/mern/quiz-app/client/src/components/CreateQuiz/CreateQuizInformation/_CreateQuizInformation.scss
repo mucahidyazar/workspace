@@ -1,0 +1,120 @@
+.information__image {
+  position: relative;
+  width: 23rem;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  background-color: darken($color: $color-light, $amount: 50);
+  border-radius: 0.5rem;
+  font-size: inherit;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    background: $color-darker;
+    outline: none;
+    cursor: pointer;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  i {
+    margin-right: 2rem;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.information__title {
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  background-color: darken($color: $color-light, $amount: 50);
+  border-radius: 0.5rem;
+  font-size: inherit;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    background: $color-darker;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.information__description {
+  margin-top: 2rem;
+  width: 100%;
+  height: 20%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 10rem;
+  max-height: 10rem;
+  border: none;
+  padding: 1.5rem;
+  transition: all 0.3s;
+  background-color: darken($color: $color-light, $amount: 50);
+  border-radius: 0.5rem;
+  font-size: inherit;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    background: $color-darker;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.information__informations {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  & > * {
+    width: 30%;
+    font-size: inherit;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    background-color: darken($color: $color-light, $amount: 50);
+    color: inherit;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .information__informations {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 19.3em) {
+  .information__image {
+    width: 100%;
+    height: 10rem;
+  }
+}

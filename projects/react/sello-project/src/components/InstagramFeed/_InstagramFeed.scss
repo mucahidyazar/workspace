@@ -1,0 +1,36 @@
+.instagram-feed {
+  position: relative;
+  margin-top: 10rem;
+  padding: 0 1rem;
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-black-2;
+    color: #fff;
+    padding: 1rem 3rem;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media only screen and(max-width: 76.8em) {
+  .instagram-feed {
+    &__gallery {
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+  }
+}

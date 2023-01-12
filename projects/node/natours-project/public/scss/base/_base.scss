@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  //after ve before pseudo elementlerine de bunlari eklemis oluruz boylelikle
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%; //I want 1 rem => 10px, 10/16 => 62.5%
+
+  //width < 1200px
+  @include respond(tab-land) {
+    font-size: 56.25%; //I want 1 rem => 9px, 9/16 => 56.25%
+  }
+
+  //width < 900px
+  @include respond(tab-port) {
+    font-size: 50%; //I want 1 rem => 8px, 8/16 => 50%
+  }
+
+  //width > 1800px
+  @include respond(big-desktop) {
+    font-size: 75%; //I want 1 rem => 12px, 12/16 => 75%
+  }
+}
+
+body {
+  box-sizing: border-box; //Burda yazip * icinde inherit yaparsak boylelikle ileride eger kullanmak istemezsek degistirebiliriz.
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

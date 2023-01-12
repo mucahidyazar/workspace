@@ -1,0 +1,4 @@
+export const GET_GAMES = 'GET_GAMES';
+export const GET_TOP_GAMES = 'GET_TOP_GAMES';
+export const GET_BEST_OFFER_GAMES = 'GET_BEST_OFFER_GAMES';
+export const GET_MOST_PLAYED_GAMES = 'GET_MOST_PLAYED_GAMES';

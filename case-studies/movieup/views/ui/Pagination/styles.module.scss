@@ -1,0 +1,42 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 75px;
+
+  & > button:nth-child(2),
+  & > button:nth-child(3),
+  & > button:nth-child(4) {
+    margin-right: 10px;
+  }
+  & > button:first-child {
+    margin-right: 20px;
+  }
+  & > button:last-child {
+    margin-left: 20px;
+  }
+}
+
+@include mobile {
+  .pagination {
+    justify-content: space-evenly;
+
+    & > button:nth-child(2),
+    & > button:nth-child(3),
+    & > button:nth-child(4) {
+      margin-right: 0;
+    }
+    & > button:first-child {
+      padding: 0 20px;
+      margin-right: 0;
+    }
+    & > button:last-child {
+      padding: 0 20px;
+      margin-left: 0;
+    }
+  }
+}

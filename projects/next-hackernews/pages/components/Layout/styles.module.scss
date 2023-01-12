@@ -1,0 +1,28 @@
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  background: #f6f6ef;
+}
+.nav {
+  background: #f60;
+  padding: 1rem;
+
+  &__back {
+    font-size: 2rem;
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+
+  & > * {
+    display: inline-block;
+    color: #333;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  & .main__title {
+    font-weight: bold;
+  }
+}

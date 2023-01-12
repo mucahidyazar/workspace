@@ -1,0 +1,51 @@
+/*
+  Naming Grid Lines
+*/
+
+.container {
+  width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-gap: 1rem;
+  /*
+    +Kisaca Grid Template Rows 'un anlami
+        -header-start 'dan header-end 'e kadar 100px Row yuksekligi
+        -header-end 'in bitis noktasi ile box-start 'in baslangic noktasi ayni yer
+        -box-start 'dan box-end 'e kadar 200px Row yuksekligi
+        -main-start 'dan main-end 'e kadar 400px Row yuksekligi
+        -footer-start 'dan footer-end 'e kadar 100px Row yuksekligi
+    +Kisaca Grid Template Columns 'un anlami
+        -col-start ve col-end 'den 3 tane olustur ve col-start 'dan col-end 'e kadar Column genisligi 1fr olsun
+        -repeat ile bu sekilde olusturulan col-start ve end ler olusturulduklari kadar cagrilirken belirtilmeleri icin kacinci deger olduklari sayi olarak yazilir. Ornegin col-start 1 veya col-end 1 veya col-start 3 veya col-end 2 gibi...
+        -3 tane olusturdugumuz icin son col-end 3 'den grid-end 'e kadar 200px column genisligi olsun demisiz
+  */
+  grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
+}
+
+.container > * {
+  background-color: orangered;
+  padding: 20px;
+  color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+/* Kullanimlarida style 'da .container itemlari icinde bu sekilde */
+header {
+  grid-column: col-start 1 / grid-end;
+}
+
+.sidebar {
+  grid-column: col-end 3 / grid-end;
+  grid-row: box-start / main-end;
+}
+
+.main-content {
+  grid-column: col-start 1 / col-end 3;
+}
+
+footer {
+  grid-column: col-start 1 / grid-end;
+}

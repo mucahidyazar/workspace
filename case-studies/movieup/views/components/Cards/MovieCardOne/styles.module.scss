@@ -1,0 +1,108 @@
+@import '../../../../public/static/assets/styles/abstracts/variables';
+@import '../../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../../public/static/assets/styles/base/breakpoints';
+
+.card {
+  width: 100%;
+  height: 711px;
+
+  &Header {
+    width: 100%;
+    height: 436px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &HeaderFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 14px;
+  }
+  &Genres {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(100% - 50px);
+
+    & > button:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  &Image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  &Icon {
+    width: 41px;
+    height: 41px;
+    background-color: $neutral-4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-1;
+      @include transform(scale(1.2));
+    }
+  }
+  &IconActive {
+    background-color: $primary-1;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+      background-color: rgba($color: $primary-1, $alpha: 0.7);
+    }
+
+    & i::before {
+      color: $neutral-6;
+    }
+  }
+
+  &Info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+
+    img {
+      margin-right: 20px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  &Year {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  &Title {
+    font-weight: 600;
+    font-size: 28px;
+    text-overflow: ellipsis;
+
+    /* Needed to make it work */
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  &Description {
+    line-height: 30px;
+    color: $neutral-1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

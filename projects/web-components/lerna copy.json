@@ -1,0 +1,78 @@
+{
+  "packages": ["src/packages/*"],
+
+  // independent yaparak aslinda packagelerin hepsi icin ayri version numarasi tutariz. Eger burayi 1.0.0 yaparsak tum packageler bir sonraki guncellemede 1.0.1 olurlar buraya gore.
+  "version": "independent",
+  "npmClient": "yarn",
+
+  // Eger burasi true ise buradaki packages ler package.jsondaki packageslere overwritten olur yani uzerine yazilir
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "exact": true
+    },
+    "publish": {
+      "registry": "https://registry.npmjs.org",
+      // "conventionalCommits": true, // Bunu eklemezsek major minor alpha beta gibi secenekler ve version numalarini biz seceriz, Eklersek otomatik kendi secer
+      "message": "chore(release): Version bumped %s",
+      "ignoreChanges": ["**/stories/**", "**/tests/**"],
+      "allowBranch": "main"
+    }
+  }
+}
+
+// lerna exec
+// Tum paketlerde ayni kodu execute edebiliriz. Tum paketlere build scripti tanimlamak yerine rootdaki scripte build scripti tanimlar orda exec ile asagidaki gibi calistirirsak bu tum paketlere gidip bunu tek tek calistirir.
+//"build": "lerna exec --parallel --stream -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+
+// lerna run
+// Tum paketlerde npm run diyebiliriz veya npm run scriptini calistirabiliriz
+
+// lerna add
+// tum paketlerimize veya belirli paketlere dependency ekleyebiliriz. --dev ile dev dependecy si ekler
+// Tum paketlere
+// lerna add react
+// Belirli bir pakete
+//This command will install react to all the packages. If the dependency is just for development, you can add --dev option.
+//In addition, if the dependency is just for some specific packages, you can use --scope option:
+// lerna add react --scope=module1
+
+//However, there will be another question is about can I install react in multiple packages? The answer seems negative. You have to execute lerna add one by one or use prefix:
+// lerna add react packages/react-bootstrap-*
+
+// How to publish to private npm registry?
+// The most quick way is add --registry <url> option when do the publish. Sometime this is useful when you don’t want to configure the registry configuration in all package.json file.
+// However, the best practice is configure the publishConfig in your package.json:
+// "publishConfig": {
+//    "registry": YOUR_REGISTRY_URL_HERE
+// }
+// In addition, make sure you configure your private registry url in .npmrc file:
+// registry = YOUR_REGISTRY_URL_HERE
+
+// LINKS
+// https://medium.com/shopback-tech-blog/5-tips-about-lerna-4186840093f2
+
+// LINK
+// https://dev.to/try_catch/top-5-handy-lerna-flags-for-your-monorepo-10fa
+// --scope HINTS
+// // starts a package with the name 'server'
+// lerna run --scope server start
+
+// // starts all packages end up on '-server'
+// lerna run --scope *-server start
+
+// // you can select multiple scopes at the same time
+// // executes either '-server's and '-client's 'start' command
+// lerna run --scope *-server --scope *-client start
+
+// --stream vs --parallel
+// Ikiside aslinda ayni isi yapar. calistirdigimiz kodun ciktisinin onune hangi pakete aitse renkli bir sekilde o paketin ismini yazar ve sonrasinda calisan kodu veya terminale basilacak kodu gosterir
+// --parallel in streamden farki calisma sirasi gozetmez kodu ayni anda tum paketlerde calsitirir ve devaminda herhangi bir siraya ve pakete bakmaksizin kodu calistirir, Bu yuzden uzun surecek build islemleri gibi islemlerde stream yerine parallel tercih edilmelidir.
+
+// lerna bootstrap
+// bizim paketlerimizi symlinkle birbirine baglar, diger root ve diger packagelerimizdeki diger tum package.jsonlardaki hatici libraryleri npm install yapar gibi yukler.
+// npm install all external dependencies of each package.
+// Symlink together all Lerna packages that are dependencies of each other.
+// Ve prepublish ve prepare scriptlerini butun bootstrap olmsu yani ignorelanmamis packagelerimizde calistirir.
+// npm run prepublish in all bootstrapped packages (unless --ignore-prepublish is passed).
+// npm run prepare in all bootstrapped packages.

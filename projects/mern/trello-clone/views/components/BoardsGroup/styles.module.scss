@@ -1,0 +1,126 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+
+.boardsGroup {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $text-secondary;
+  }
+}
+.boardHeader,
+.boardHeaderText,
+.boardCategory {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: $text-secondary;
+}
+.boardHeader {
+  justify-content: space-between;
+}
+.boardCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-gap: 1.5rem;
+}
+.boardHeaderText {
+  padding: 1rem 0;
+
+  img {
+    margin-right: 1rem;
+  }
+  p {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+.boardCategory {
+  padding: 2rem 0;
+
+  p {
+    margin-right: 1rem;
+  }
+}
+.boardLink {
+  color: $text-secondary;
+  text-decoration: underline;
+  display: block;
+  padding: 1rem 0;
+}
+.boardAdd {
+  width: 100%;
+  height: 11rem;
+  background-color: $text-secondary;
+  color: $text-inverted;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  padding: 5px 10px;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+
+.modal,
+.modalWall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal {
+  width: 41rem;
+  height: 11rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.modalWall {
+  position: relative;
+  width: 29.6rem;
+  padding: 1rem;
+
+  &Input {
+    height: max-content;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    outline: none;
+    color: $text-inverted;
+
+    &::placeholder {
+      color: $text-inverted;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &Button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: $text-inverted;
+    color: $text-secondary;
+  }
+}
+.modalBackgrounds {
+  width: 10.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25px, 29px));
+  grid-gap: 0.8rem;
+
+  &Item {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: red;
+  }
+}

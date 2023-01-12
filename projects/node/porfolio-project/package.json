@@ -1,0 +1,15 @@
+{
+  "name": "porfolio-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js",
+    "scss": "node-sass -w public/scss/ -o public/css/ --recursive"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "node-sass": "^4.13.1"
+  }
+}

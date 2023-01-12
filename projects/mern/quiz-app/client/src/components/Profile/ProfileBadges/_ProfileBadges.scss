@@ -1,0 +1,52 @@
+.badges {
+  &__title {
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: rgba($color-light, 0.1);
+    margin-bottom: 3rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-gap: 1rem;
+    font-size: 1.5rem;
+
+    &--item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem 4rem 2rem;
+      transition: all 0.3s;
+      overflow: hidden;
+
+      i {
+        font-size: 5rem;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: auto;
+        font-size: 1.5rem;
+        background-color: rgba($color-light, 0.05);
+        transform: translateY(1.8rem);
+        text-align: center;
+        transition: all 0.5s;
+      }
+
+      &:hover {
+        background-color: rgba($color-light, 0.1);
+
+        span {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

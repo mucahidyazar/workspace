@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+const users = ["user1", "user2", "user3", "user4", "user5"];
+const userResponse = await fetch('https://jsonplaceholder.typicode.com/users');
+const usersData = await userResponse.json();
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		Home Page
+		{users.map(user => (
+				<p>{user}</p>
+		))}
+		{usersData.map(user => (
+			<>
+				<h3>{user.name}</h3>
+				<p>{user.email}</p>
+			</>
+		))}
+	</main>
+</Layout>
+

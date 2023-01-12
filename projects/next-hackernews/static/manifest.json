@@ -1,0 +1,20 @@
+{
+  "name": "Next HackerNews",
+  "short_name": "next-hackernews",
+  "lang": "tr-TR",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f60",
+  "icons": [
+    {
+      "src": "/static/icons/icon-512x512",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icons/icon-192x192",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

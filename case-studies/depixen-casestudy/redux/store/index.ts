@@ -1,0 +1,21 @@
+// #region Global Imports
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { createWrapper } from 'next-redux-wrapper'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
+// #endregion Global Imports
+
+// #region Local Imports
+import Reducers from '../reducers'
+// #endregion Local Imports
+
+export const makeStore = (initialState: {}) => {
+  return createStore(
+    Reducers,
+    initialState,
+    composeWithDevTools(applyMiddleware(thunkMiddleware))
+  )
+}
+
+export const wrapper = createWrapper(makeStore, { debug: true })

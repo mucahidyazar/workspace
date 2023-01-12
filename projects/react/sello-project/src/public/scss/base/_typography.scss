@@ -1,0 +1,32 @@
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins";
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+$font-black: 900;
+
+@media only screen and(max-width: 120em) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and(max-width: 102.4em) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and(max-width: 76.8em) {
+  .container {
+    width: 85%;
+  }
+}

@@ -1,0 +1,2 @@
+export const GET_WEATHER = 'GET_WEATHER'
+export const DELETE_WEATHER = 'DELETE_WEATHER'

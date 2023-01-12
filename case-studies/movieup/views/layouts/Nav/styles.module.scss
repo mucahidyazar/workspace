@@ -1,0 +1,77 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+@import '../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../public/static/assets/styles/base/breakpoints';
+
+.nav {
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 900;
+  margin-right: 100px;
+
+  span {
+    color: $primary-1;
+  }
+  a {
+    color: $neutral-0;
+  }
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navItem {
+  margin-right: 50px;
+
+  a {
+    color: $neutral-0;
+  }
+
+  &Active {
+    a {
+      color: $primary-1;
+    }
+  }
+}
+
+@include tablet {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .navItem {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .navLeft {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .navSearch {
+    width: 100% !important;
+  }
+}
+
+@include mobile {
+  .navItem:first-child {
+    display: none;
+  }
+  .logo {
+    margin-right: 0;
+  }
+}

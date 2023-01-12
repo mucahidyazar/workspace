@@ -1,0 +1,19 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+
+  h1 {
+    text-transform: uppercase;
+    width: 80%;
+    color: $text-inverted;
+    font-size: 40px;
+    line-height: 150%;
+    text-shadow: 5px 5px rgba($color: $text-300, $alpha: 0.5);
+  }
+}

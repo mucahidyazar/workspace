@@ -1,0 +1,88 @@
+.TodoHeader {
+    background-color: #EF5350;
+    height: 30vh;
+    min-height: 30vh;
+    max-height: 30vh;
+
+    .TodoNav {
+
+        .TodoNavbar {
+            padding: 1rem;
+            float: right;
+
+            a {
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+                background-color: #2F2F2F;
+                padding: .7rem 1rem;
+                border-radius: .3rem;
+            }
+            a:hover {
+                background-color: lighten($color: #2F2F2F, $amount: 5);
+            }
+
+            i {
+                font-size: 1.6rem;
+                margin-left: 1rem;
+                position: relative;
+                top: .2rem;
+
+                .ArchiveTaskCount {
+                    padding: .25rem;
+                    border-radius: 50%;
+                    background-color: #EF5350;
+                    color: white;
+                    position: absolute;
+                    bottom: -5px;
+                    right: -6px;
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .TodoBrand {
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 3rem 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .TodoForm {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+        input {
+            padding: 1rem;
+            border: none;
+            border-radius: .3rem;
+            font-size: 1.1rem;
+            width: 40%;
+        }
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border: none;
+            border-radius: .3rem;
+            padding: 1rem;
+            background-color: darken($color: #57CEBE, $amount: 15);
+            color: white;
+            font-size: 1.1rem;
+        }
+        button:hover {            
+            cursor: pointer;
+            background-color: darken($color: #57CEBE, $amount: 20);
+        }
+        button:focus {
+            outline: none;
+        }
+    }
+}

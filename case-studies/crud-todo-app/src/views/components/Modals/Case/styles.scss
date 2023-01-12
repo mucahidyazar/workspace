@@ -1,0 +1,33 @@
+.case {
+  width: 50rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 15px 35px rgba(50, 50, 93, 0.1),
+    0px 5px 15px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .buttons.ThereIsOneButton {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

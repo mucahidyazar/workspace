@@ -1,0 +1,72 @@
+@import "../../views/styles/abstracts/variables";
+@import "../../views/styles/base/typography";
+
+.details {
+}
+.detail {
+}
+.todoDetail {
+  height: 100%;
+}
+.todoTop {
+  height: 348px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoBottom {
+  height: 231px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorName {
+  font-size: $heading-2;
+  font-weight: 600;
+}
+.authorCity {
+  font-weight: 300;
+}
+.authorDetail {
+  &Item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+
+    p:first-child {
+      width: 100px;
+      color: #adb5bd;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $primary;
+    }
+  }
+}
+.todoMap {
+  width: 48.5rem;
+  height: 25.8rem;
+}
+
+.todoBottom {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &Text {
+    text-align: center;
+    line-height: 200%;
+    padding: 3rem 0;
+  }
+  a {
+    color: $primary;
+  }
+}

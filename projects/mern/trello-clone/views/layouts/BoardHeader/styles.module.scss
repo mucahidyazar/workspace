@@ -1,0 +1,35 @@
+@import '../../../public/static/assets/styles/abstracts/variables';
+
+.header,
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header {
+  padding: 1rem 0;
+}
+.infoName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 2rem;
+  color: $text-inverted;
+}
+.settings {
+  background-color: rgba(#ffffff, 0.5);
+  width: 13rem;
+  height: 32px;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(#ffffff, 0.7);
+  }
+}

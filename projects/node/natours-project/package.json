@@ -1,0 +1,27 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "devserver": "nodemon app.js",
+    "watch:sass": "node-sass -w public/scss/main.scss -o public/css/main.css --recursive",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass public/scss/main.scss -o public/css/compile",
+    "concat:css": "concat -o public/css/style.concat.css public/css/icon-font.css public/css/compile/main.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/css/style.concat.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
+}

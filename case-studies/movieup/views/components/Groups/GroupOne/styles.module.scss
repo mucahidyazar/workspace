@@ -1,0 +1,17 @@
+@import '../../../../public/static/assets/styles/abstracts/variables';
+@import '../../../../public/static/assets/styles/abstracts/mixins';
+@import '../../../../public/static/assets/styles/base/breakpoints';
+
+.searchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-column-gap: 25px;
+  grid-row-gap: 60px;
+  margin-bottom: 75px;
+}
+
+@include mobile {
+  .searchResults {
+    grid-template-columns: 100%;
+  }
+}

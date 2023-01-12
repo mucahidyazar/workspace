@@ -1,0 +1,49 @@
+.section__registration {
+  margin-top: 10rem;
+  padding: 10rem;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.registration {
+  width: 70%;
+  margin: auto;
+  box-shadow: 0 2rem 3rem rgba($color-light, 0.1);
+
+  &__header {
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--login {
+      width: 100%;
+      padding: 2rem 0;
+      border-top-left-radius: 0.5rem;
+    }
+
+    &--register {
+      width: 100%;
+      padding: 2rem 0;
+      border-top-right-radius: 0.5rem;
+    }
+
+    &--active {
+      background-color: $color-darker;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section__registration {
+    margin-top: 1vh;
+    padding: 5vh;
+  }
+}

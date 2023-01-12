@@ -1,0 +1,50 @@
+.trending__title {
+  position: absolute;
+  top: 14%;
+  left: 10%;
+  z-index: 10;
+  font-size: 2rem;
+
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg) translate(0, -10rem);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+
+  span {
+    display: inline-block;
+    background-color: #333;
+    height: 10rem;
+    width: 0.1rem;
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and(max-width: 120em) {
+  .trending__title {
+    left: 5%;
+  }
+}
+
+@media only screen and(max-width: 76.8em) {
+  .trending__title {
+    left: 1%;
+  }
+}
+
+@media only screen and(max-width: 57.6em) {
+  .trending__title {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg) translate(0, -50%);
+    left: 10%;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Keyframes</title>
+    <style>
+      body {
+        background: #333;
+      }
+
+      .box {
+          position: relative;
+          background: #fff;
+          width: 200px;
+          height: 200px;
+          /* Bu sekidle animasyonu isimlendirerek yada tanimlayarak asagidaki gibi cagirabiliriz */
+          animation-name: animate1;
+          /* Animasyonun 1 turunun kac saniye icinde tamamlanacagi */
+          animation-duration: 3s;
+          /* Animasyon tekrar sayisi - Sinirsiz yapmak icin => infinite => yazin */
+          animation-iteration-count: 2;
+          /* Bitis noktasinda kalmasini soyleriz en son tur bitince */
+          animation-fill-mode: forwards;
+          /* Animation un sayfa acilinca ne kadar gecikme sonrasi calisacagini belirleriz */
+          animation-delay: 1s;
+          /* animation-direction: alternate => from dan to ya animate eder */
+          /* animation-direction: alternate-reverse => to dan from a animate edilmesini saglar */
+          animation-direction: alternate-reverse;
+          /* ease in animation yavas baslar hizlanir gibi anlamlari vardir */
+          /* Bunun gibi cok fonksiyon vardir burada detaylari internetten bakin */
+          animation-timing-function: ease-in;
+          
+          /* Yada yukaridakilerin hepsini sileriz ve asagidaki gibi tek satirda kullanabiliriz */
+          /* @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+          animation: animate1 5s forwards 1s ease-in-out;
+      }
+
+      @keyframes animate1 {
+          /* Nereden : Baslangic ozelliklerini belirleriz animation un */
+          from {
+              top: 0;  
+              width: 100px;
+          }
+          /* Nereye : Bitis ozelliklerini yani turu nerede tamamlayacagini belirleriz buradada */
+          to {
+              top: 500px;
+              width: 600px;
+              background-color: green;
+          }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+
+  /* Excpilicit Grid */
+  grid-template-rows: 150px 150px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+
+  /* Excpilicit Grid disinda kalanlara implicit Grid deriz */
+  /* Implicit Gridleri grid-auto-rows veya grid-auto-columns ile ozellikler verebiliriz.*/
+  grid-auto-rows: 100px;
+  /* grid-auto-flow: row; iken grid-auto-columns: .5fr; deger verirsek implicit gridler explicit gridlerin yarisi kadar genislik alir. */
+  grid-auto-columns: 0.5fr;
+
+  /* Gridleri Column olarak yada Row olarak islenmesini saglariz. Defaul olan Rowdur */
+  grid-auto-flow: column;
+  grid-auto-flow: row;
+
+  /* row yanina dense yaparsak bazilarini tum satiri kapladigimiz icin tek kalan kucuk p[arcalari yan yana koyacakdir. */
+  grid-auto-flow: row dense;
+}
+
+.item {
+  padding: 20px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 30px;
+  background-color: orangered;
+}
+
+/* Alinging Grid Items To Grid Areas */
+.container {
+  display: grid;
+  /* Itemlar sadece css degerlerini koruyarak kapladiklari grid alanlarini dikeyde ortalarlar. */
+  /* STRETCH / center / end / start */
+  align-items: center;
+  /* align-items: stretch; ise Grid itemslarini default olarak geldigi degerdir */
+
+  /* Tum grid items lar sadece icerikleri kadar gozukerek ve iceriklerinin tam ortasindan grid alanlarinin icerisinde dikey ve yatay olarak ortalanirlar. */
+  justify-items: center;
+  /*
+    start => sol da ve dikey olarak ortada hizalanir
+    end => sagda ve dikey olarak ortada
+  */
+}
+
+.item--4 {
+  background-color: crimson;
+  grid-row: 2 / span 3;
+
+  align-self: center;
+  justify-self: center;
+  /* Align-items ve Justify-items in yaptiklarini tek bir elemana uygulamak istersek */
+}
+
+.item--7 {
+  background-color: palevioletred;
+  grid-column: 1 / -1;
+}

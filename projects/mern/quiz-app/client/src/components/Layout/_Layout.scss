@@ -1,0 +1,32 @@
+.container {
+  width: 50%;
+  margin: 5rem auto;
+  padding: 1rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 93.75em) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container {
+    width: 85%;
+    margin: 3rem auto;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .container {
+    width: 95%;
+    margin: 1rem auto;
+  }
+}

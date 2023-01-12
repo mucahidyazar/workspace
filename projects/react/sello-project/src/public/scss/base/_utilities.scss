@@ -1,0 +1,12 @@
+.btn-sm {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: $color-black-2;
+  font-weight: $font-light;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-red-4;
+  }
+}

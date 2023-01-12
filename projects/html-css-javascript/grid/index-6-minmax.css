@@ -1,0 +1,51 @@
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  background-color: #ddd;
+
+  display: grid;
+  grid-template-rows: repeat(2, 150px);
+  /* MaxContent bize diz icinde Mucahid yaziyorsa Mucahid yazisinin kapladigi alan kadar genislik almasini saglatir COLUMN 'un */
+  /* MinContent ayni columnda bulunan en az contente sahip icerigin genisligini alir */
+  grid-template-columns: max-content 1fr 1fr min-content;
+  /* Budada ise 2 tane min contente sahip satir olusturur. */
+  grid-template-rows: repeat(2, min-content);
+
+  /* minmax ilede ilk once minimum ne kadar genislikte olacagini ve sonrada maximum ne kadar genislikte olacagini belirliyoruz */
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  grid-gap: 1rem;
+  height: 1000px;
+}
+
+.item {
+  padding: 20px;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 30px;
+  background-color: orangered;
+}
+
+.item--1 {
+  background-color: orangered;
+}
+.item--2 {
+  background-color: yellowgreen;
+}
+.item--3 {
+  background-color: blueviolet;
+}
+.item--4 {
+  background-color: palevioletred;
+}
+.item--5 {
+  background-color: royalblue;
+}
+.item--6 {
+  background-color: goldenrod;
+}
+.item--7 {
+  background-color: crimson;
+}
+.item--8 {
+  background-color: darkslategrey;
+}

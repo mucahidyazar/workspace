@@ -1,0 +1,29 @@
+{
+  "name": "next-hackernews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon pages/index.js",
+    "start": "concurrently npm:start:*",
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/node": "^13.9.1",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "concurrently": "^5.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "^9.3.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "typescript": "^3.8.3"
+  }
+}

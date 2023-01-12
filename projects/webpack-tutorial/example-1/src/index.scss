@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box {
+  width: 100px;
+  height: 100px;
+
+  &1 {
+    background-color: red;
+  }
+  &2 {
+    background-color: gray;
+  }
+  &3 {
+    background-color: gold;
+  }
+}

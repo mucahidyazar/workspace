@@ -1,0 +1,21 @@
+@import "../../styles/abstracts/variables";
+
+#footer {
+  height: 11rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.footerLeft {
+  span {
+    margin-left: 1rem;
+    color: $success;
+  }
+}
+.footerRight {
+  a {
+    color: #8898aa;
+  }
+}

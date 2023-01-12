@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Align</title>
+
+    <style>
+        #container {
+            background: #555;
+            height: 600px;
+            display: flex;
+            /* flex-start => default olarak gelen degerdir ve tum itemlari solda siralar */
+            /* flex-end => tum itemleri ayni satirda sagda hizalar. Item1 - Item 2 - Item3 olarak */
+            /* center => tum itemlari ortada hizalar */
+            /* space-arround => tum bosluklar itemlarin etrafinda esit olarak dagitilir. Evently ile aralarindaki fark ise bosluklar tum itemlere ayri ayri esit dagitildigindan item 1 ve2 arasinda 2 ve 3 arasinda daha fazla bosluk olur. */
+            /* space-between => tum bosluklar aralarinda hizalanir. Ilk bastaki itemin solunda ve sonraki itemin saginda bosluk olmaz. */
+            /* space-evenly => itemlerin tum taraflarina bosluklar esit dagitilir. */
+            justify-content: space-evenly;
+            /* justify-content yatayda hizalama yapar*/
+
+            /* stretch => itemlarin hepsi containerin uzunlugu kadar asagi boyu uzatilir. Default olarak gelen degerdir. */
+            /* flex-start => containerin en ust hizasinda tutar cisimleri ve itemlarin parent elemente gore boyutlarinin uzamasini engeller */
+            /* flex-end => Containerin en alt hizasinda tutar cisimleri ve uzamasini engeller */
+            /* center => Itemlari diker olarak containerin ortasinda konumlandirir ve kendi boyutlarinda tutar ve stretch uzatmasini yine onler */
+            /* baseline => flex-start ile ayni */
+            align-items: stretch;
+            /* align-content dikeyde hizalama yapar (Yukseklik olmasi lazim) */
+
+            /* container 600px ve bizim flew-wrap ile 2 satira dusurulmus 100px uzunlugunda 12 tane kutumuz var diyelim. 6 tanesi bir 6 tanesi bir */
+            /* Fakat normalde 1. 6 kutuyu en ustten siralar 2. 6 kutuyu 300. px yukseklikten siralar */
+            /* flex-start => yaparak tum satirlari yani 2 6 kutulu satiri alt alta aralarinda bosluk olmadan siralariz. */
+            /* flex-end => yaparak tum satirlari en alta dayali hizalariz */
+            /* center => tum satirlari dip dibe aralarinda bosluk olmadan ortada hizalariz */
+            /* space-around => 2 kutu grubu arasinda her birine bosluklari esit olarak dagitir */
+            /* space-between => default olarak gelen degerdir tum bosluk input gruplari arasina konulur */
+            /* space-evenly => item gruplarinin her bir grubuna dikey olarak aralarina esit bosluk konulur. */
+            align-content: center;
+            /* align-content dikeyde fazla olan bosluklari dagitma islemi yapar */
+        }
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            text-align: center;
+            padding: 1rem;
+            margin: 0.5rem;
+            /* width verir. Width ile ayni islevi gorur. */
+            flex-basis: 200px;
+        }
+
+        /* Order ilede itemlari istedigimiz sira ile konumlandirilmalarini saglayabiliriz. */
+        .item-1 {
+            order: 3;
+        }
+        .item-2 {
+            order: 1;
+        }
+        .item-3 {
+            order: 2;
+        }
+        
+        .item-2 {
+            /* flex-start => dikeyde en basta konumlandirilir. */
+            /* flex-end => dikeyde en dipte konumlandirilir. */
+            /* center => dikeyde ortada konumlandirir */
+            /* stretch => uzatir */
+            /* baseline => asil konumunda konumlandirir. */
+            align-self: flex-end;
+            /* align-self => Tek bir itemi dikey olarak hizalamak */
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="container">        
+        <div class="item item-1"><h3>Item 1</h3></div>
+        <div class="item item-2"><h3>Item 2</h3></div>
+        <div class="item item-3"><h3>Item 3</h3></div>
+    </div>
+    
+</body>
+</html>

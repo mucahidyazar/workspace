@@ -1,0 +1,140 @@
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+#nav {
+  img {
+    position: absolute;
+    top: 0;
+    right: -10rem;
+    width: min-content;
+    z-index: 100;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 800;
+
+  &--dot {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    background-color: #ff2600;
+    border-radius: 5rem;
+  }
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  margin-right: 50rem;
+
+  &--item {
+    padding: 1rem;
+    font-weight: 200;
+    color: $color-light-1;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-black-1;
+    }
+  }
+
+  &--item:first-child {
+    color: $color-black-1;
+    text-decoration: underline;
+  }
+}
+
+@media only screen and(max-width: 120em) {
+  #nav img {
+    margin-right: -15rem;
+  }
+}
+
+@media only screen and(max-width: 102.4em) {
+  #nav img {
+    margin-right: -25rem;
+  }
+}
+
+@media only screen and(max-width: 76.8em) {
+  #nav img {
+    margin-right: -40rem;
+  }
+}
+
+@media only screen and(max-width: 57.6em) {
+  #nav img {
+    margin-right: -70rem;
+  }
+
+  .nav__logo {
+    display: inline-block;
+    width: min-content;
+    &--dot {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+#header {
+  height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #efefef;
+
+  .trending__title {
+    top: 50%;
+  }
+}
+
+.header__body {
+  width: 70%;
+  position: relative;
+
+  &--title {
+    margin-bottom: 2rem;
+    font-weight: $font-black;
+  }
+
+  &--body {
+    margin-bottom: 4rem;
+    font-weight: $font-light;
+    color: $color-black-2;
+  }
+}
+
+@media only screen and(max-width: 57.6em) {
+  #header {
+    .trending__title {
+      top: 20%;
+    }
+  }
+}
+
+@media only screen and(max-width: 25em) {
+  #header {
+    .trending__title {
+      top: 15%;
+    }
+  }
+}

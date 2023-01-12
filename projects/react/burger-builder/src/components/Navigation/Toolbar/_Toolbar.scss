@@ -1,0 +1,27 @@
+.toolbar {
+  height: 5.6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #703b09;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 90;
+
+  &__nav {
+    height: 100%;
+  }
+
+  &__logo {
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 49.9rem) {
+  .toolbar__desktop-only {
+    display: none;
+  }
+}

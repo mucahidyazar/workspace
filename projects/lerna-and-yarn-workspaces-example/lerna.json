@@ -1,0 +1,18 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ],
+      "message": "chore(release): Version bumped %s",
+      "registry": "https://registry.npmjs.org"
+    }
+  },
+  "version": "1.0.26",
+  "useWorkspaces": true,
+  "changelogPreset": "angular"
+}

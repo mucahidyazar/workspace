@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "lerna run test",
+    "test:since": "lerna run test --since",
+    "new-version": "lerna version --conventional-commits --yes",
+    "new-prerelease": "lerna version --conventional-commits  --conventional-prerelease --yes",
+    "new-release": "lerna version --conventional-commits --yes --create-release github",
+    "new-publish": "lerna publish --conventional-commits --yes",
+    "diff": "lerna diff"
+  },
+  "devDependencies": {
+    "lerna": "^3.10.6"
+  },
+  "name": "mucahidyazar"
+}
